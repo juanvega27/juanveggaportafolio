@@ -1,0 +1,348 @@
+:root {
+  --bg-dark: #07040d;
+  --bg-card: rgba(22, 12, 38, 0.75);
+  --bg-card-hover: rgba(38, 20, 66, 0.85);
+  --neon-purple: #a855f7;
+  --neon-purple-glow: rgba(168, 85, 247, 0.55);
+  --neon-cyan: #06b6d4;
+  --text-main: #f5f3ff;
+  --text-secondary: #c4b5fd;
+  --font-cyber: 'Orbitron', monospace, sans-serif;
+  --font-text: 'Rajdhani', sans-serif;
+}
+
+body {
+  background-color: var(--bg-dark);
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(126, 34, 206, 0.3) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(88, 28, 135, 0.35) 0%, transparent 45%),
+    linear-gradient(180deg, #05020a 0%, #0d061a 100%);
+  background-attachment: fixed;
+  color: var(--text-main);
+  font-family: var(--font-text);
+  font-size: 1.15rem;
+  letter-spacing: 0.5px;
+}
+
+/* Tipografías */
+h1, h2, h3, h4, h5, h6, .cyber-logo, .cyber-btn-primary, .cyber-btn-secondary, .badge {
+  font-family: var(--font-cyber);
+}
+
+.text-purple {
+  color: var(--neon-purple) !important;
+}
+
+.text-light-purple {
+  color: var(--text-secondary);
+}
+
+/* Navbar Glassmorphism */
+.cyber-nav {
+  background: rgba(10, 5, 20, 0.85);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(168, 85, 247, 0.3);
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.7);
+}
+
+.cyber-logo {
+  font-size: 1.3rem;
+  color: #fff !important;
+  text-shadow: 0 0 10px var(--neon-purple-glow);
+  letter-spacing: 2px;
+}
+
+.cyber-link {
+  color: var(--text-secondary) !important;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.cyber-link:hover {
+  color: #ffffff !important;
+  text-shadow: 0 0 10px var(--neon-purple);
+  transform: translateY(-2px);
+}
+
+.cyber-toggler {
+  border-color: var(--neon-purple);
+}
+
+/* Hero */
+.hero-section {
+  min-height: 85vh;
+  padding-top: 100px;
+}
+
+.hero-box {
+  max-width: 850px;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(168, 85, 247, 0.15);
+  border: 1px solid var(--neon-purple);
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-family: var(--font-cyber);
+  letter-spacing: 1.5px;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--neon-cyan);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--neon-cyan);
+}
+
+.neon-text {
+  color: #e9d5ff;
+  text-shadow: 0 0 15px var(--neon-purple), 0 0 30px var(--neon-purple-glow);
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  font-size: 1.35rem;
+}
+
+/* Botones Futuristas */
+.cyber-btn-primary {
+  background: linear-gradient(135deg, #7e22ce, #a855f7);
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  font-size: 0.9rem;
+  letter-spacing: 1.5px;
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.5);
+  clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+  transition: all 0.3s ease;
+}
+
+.cyber-btn-primary:hover {
+  background: linear-gradient(135deg, #9333ea, #c084fc);
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 0 30px rgba(168, 85, 247, 0.9);
+}
+
+.cyber-btn-secondary {
+  background: transparent;
+  color: var(--text-secondary);
+  border: 1px solid var(--neon-purple);
+  padding: 12px 28px;
+  font-size: 0.9rem;
+  letter-spacing: 1.5px;
+  clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+  transition: all 0.3s ease;
+}
+
+.cyber-btn-secondary:hover {
+  background: rgba(168, 85, 247, 0.2);
+  color: #fff;
+  box-shadow: 0 0 20px var(--neon-purple-glow);
+}
+
+/* Títulos con Línea Neón */
+.cyber-heading {
+  font-size: 1.9rem;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.cyber-heading::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, var(--neon-purple), transparent);
+  margin-left: 1rem;
+}
+
+/* Cards Cyberpunk */
+.cyber-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+  transition: all 0.35s ease;
+}
+
+.cyber-card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--neon-purple);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.8), 0 0 25px var(--neon-purple-glow);
+  transform: translateY(-5px);
+}
+
+/* Tarjetas de Habilidades */
+.skill-card {
+  background: rgba(22, 12, 38, 0.6);
+  border: 1px solid rgba(168, 85, 247, 0.25);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+  border-color: var(--neon-purple);
+  box-shadow: 0 0 20px var(--neon-purple-glow);
+  transform: translateY(-3px);
+}
+
+.skill-icon {
+  font-size: 2.2rem;
+  color: var(--neon-purple);
+  margin-bottom: 8px;
+  display: inline-block;
+}
+
+.skill-card h6 {
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  margin-bottom: 0;
+}
+
+/* Badges de Proyectos */
+.cyber-badge {
+  background: rgba(168, 85, 247, 0.2);
+  border: 1px solid rgba(168, 85, 247, 0.4);
+  color: #e9d5ff;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+}
+
+.icon-link-btn {
+  color: var(--neon-cyan);
+  font-size: 1.25rem;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.icon-link-btn:hover {
+  color: #67e8f9;
+  transform: scale(1.15);
+}
+
+/* ===================================================
+   SECCIÓN DE CONTACTO: ICONOS BOTÓN CON EFECTO NEÓN
+   =================================================== */
+.contact-icons-container {
+  padding: 1rem 0;
+}
+
+.contact-icon-btn {
+  width: 65px;
+  height: 65px;
+  border-radius: 12px;
+  background: rgba(26, 14, 46, 0.8);
+  border: 1px solid rgba(168, 85, 247, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e9d5ff;
+  font-size: 1.8rem;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5), inset 0 0 10px rgba(168, 85, 247, 0.15);
+  transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.contact-icon-btn:hover {
+  transform: translateY(-8px) scale(1.1);
+  color: #ffffff;
+}
+
+/* Colores Neón Específicos por Icono al Pasar el Mouse */
+.contact-icon-btn.linkedin:hover {
+  border-color: #0a66c2;
+  box-shadow: 0 0 25px rgba(10, 102, 194, 0.85);
+  color: #38bdf8;
+}
+
+.contact-icon-btn.github:hover {
+  border-color: #c084fc;
+  box-shadow: 0 0 25px var(--neon-purple-glow);
+  color: #ffffff;
+}
+
+.contact-icon-btn.email:hover {
+  border-color: #ec4899;
+  box-shadow: 0 0 25px rgba(236, 72, 153, 0.85);
+  color: #f472b6;
+}
+
+.contact-icon-btn.whatsapp:hover {
+  border-color: #22c55e;
+  box-shadow: 0 0 25px rgba(34, 197, 94, 0.85);
+  color: #4ade80;
+}
+
+.contact-icon-btn.telegram:hover {
+  border-color: #0ea5e9;
+  box-shadow: 0 0 25px rgba(14, 165, 233, 0.85);
+  color: #38bdf8;
+}
+
+/* Footer */
+.cyber-footer {
+  border-top: 1px solid rgba(168, 85, 247, 0.2);
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+/* ===================================================
+   FOTO DE PERFIL COMPACTA Y MINIMALISTA (FUTURISTA)
+   =================================================== */
+.profile-avatar-container {
+  position: relative;
+  width: 110px;               /* Tamaño reducido y equilibrado */
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Anillo sutil y delgado */
+.profile-avatar-glow {
+  position: absolute;
+  inset: -3px;                /* Borde mucho más fino */
+  border-radius: 50%;
+  background: conic-gradient(from 0deg, #a855f7, #06b6d4, #a855f7);
+  animation: rotateGlow 8s linear infinite;
+  filter: blur(4px);          /* Brillo más suave y tenue */
+  opacity: 0.6;               /* No invade visualmente */
+}
+
+/* Imagen limpia con borde delgado */
+.profile-avatar-img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(245, 243, 255, 0.9);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+/* Interacción suave */
+.profile-avatar-container:hover .profile-avatar-img {
+  transform: scale(1.04);
+  border-color: #c084fc;
+}
+
+.profile-avatar-container:hover .profile-avatar-glow {
+  opacity: 0.9;
+  filter: blur(6px);
+}
+
+@keyframes rotateGlow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
